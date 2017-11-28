@@ -1,0 +1,30 @@
+#blog_wrapper {
+    display: block;
+}
+/*
+#blog_posts {
+    float: left;
+}
+#blog_users {
+    float: right;
+}*/
+.apost {
+    border: 1px solid black;
+    width: 400px;
+    margin: 40px;
+}
+.postTitle, .postContent {
+    text-align: center;
+}
+.postDate {
+    float: left;
+    margin: auto;
+}
+.postAuthor {
+    float: right;
+    margin: auto;
+}
+
+.auser {
+    display: block;
+}
