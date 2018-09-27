@@ -31,7 +31,7 @@
                         while ($row = $stmt->fetch()) {
 
                             echo '<tr>';
-                            echo '<td><a href="view_user.php?id='.$row['userID'].'">'.$row['user_name'].'</a></td>';
+                            echo '<td><a href="../view_user.php?id='.$row['userID'].'">'.$row['user_name'].'</a></td>';
                             echo '<td>'.$row['user_mail'].'</td>';
 
                             ?>
