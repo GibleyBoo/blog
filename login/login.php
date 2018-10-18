@@ -36,17 +36,18 @@ if (isset($_POST['submit'])) {
         debug_print($row['user_pass']);
 
         debug_print((verify_pass("sha256", $password, $row['user_pass'])));
+        if (1){
+            echo 1;
+        }
 
-        if ($username == $row['user_name']){
-            if (verify_pass("sha256",$password,$row['user_pass'])) {
-
+        if ($username == $row['user_name'] && verify_pass("sha256",$password,$row['user_pass'])){
 
                 echo "<h1>Logged in</h1>";
 
                 echo "<pre>" . print_r($_POST, 1) . "</pre>";
-            }
+                exit();
         }
-        elseif ($username != $row['user_name'] ) {
+        elseif ($username != $row['user_name']) {
             debug_print("There is no user named " . $username . ", are you sure you entered your username correctly?");
             echo "<h1><a href=\"http://localhost:63342/webbutveckling/blog/\">Go back</a></h1>";
         }
